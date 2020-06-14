@@ -3,15 +3,196 @@
   <head>
     <meta charset="utf-8">
     <title>Simon Dice</title>
-    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <!-- <link rel="stylesheet" href="./style/styles.css"> -->
+    <link rel="stylesheet" href="./style/main.css">
   </head>
   <body>
-    <div class="gameboard">
-      <div id="celeste" class="color celeste left" data-color="celeste"></div>
-      <div id="violeta" class="color violeta right" data-color="violeta"></div>
-      <div id="naranja" class="color naranja left" data-color="naranja"></div>
-      <div id="verde" class="color verde right" data-color="verde"></div>
-      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    <div class="grid-conteiner">
+      <div class="menu">
+        <ul>
+          <h1>Simon dice</h1>
+          <button id="btnEmpezar" class="btn" onclick="empezarJuego()">Empezar a jugar!</button>
+          <button id="btnRules" class="btn" onclick="empezarJuego()">Rules</button>
+          <button id="btnCreditos" class="btn" onclick="empezarJuego()">Creditos</button>
+        </ul>
+      </div> 
+      <div class="board">
+        <!-- <div class="datos">
+          <h1>Dificultad</h1>
+        </div> -->
+        <div class="gameboard">
+          <svg
+            xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:cc="http://creativecommons.org/ns#"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            sodipodi:docname="dibujo.svg"
+            inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+            id="svg16"
+            version="1.1"
+            viewBox="0 0 210 297"
+            height="297mm"
+            width="210mm">
+            <defs
+              id="defs10">
+              <marker
+                inkscape:isstock="true"
+                style="overflow:visible;"
+                id="Arrow1Mend"
+                refX="0.0"
+                refY="0.0"
+                orient="auto"
+                inkscape:stockid="Arrow1Mend">
+                <path
+                  transform="scale(0.4) rotate(180) translate(10,0)"
+                  style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#ff00ff;fill-opacity:1"
+                  d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+                  id="path871" />
+              </marker>
+              <marker
+                inkscape:isstock="true"
+                style="overflow:visible;"
+                id="Arrow1Lend"
+                refX="0.0"
+                refY="0.0"
+                orient="auto"
+                inkscape:stockid="Arrow1Lend">
+                <path
+                  transform="scale(0.8) rotate(180) translate(12.5,0)"
+                  style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#ff00ff;fill-opacity:1"
+                  d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+                  id="path865" />
+              </marker>
+              <marker
+                inkscape:isstock="true"
+                style="overflow:visible"
+                id="Arrow1Lstart"
+                refX="0.0"
+                refY="0.0"
+                orient="auto"
+                inkscape:stockid="Arrow1Lstart">
+                <path
+                  transform="scale(0.8) translate(12.5,0)"
+                  style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#ff00ff;fill-opacity:1"
+                  d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+                  id="path862" />
+              </marker>
+              <rect
+                id="rect844"
+                height="18.544572"
+                width="20.213727"
+                y="142.04835"
+                x="91.289787" />
+              <linearGradient
+                osb:paint="solid"
+                id="linearGradient2780">
+                <stop
+                  id="stop2778"
+                  offset="0"
+                  style="stop-color:#000000;stop-opacity:1;" />
+              </linearGradient>
+            </defs>
+            <sodipodi:namedview
+              inkscape:window-maximized="1"
+              inkscape:window-y="0"
+              inkscape:window-x="0"
+              inkscape:window-height="742"
+              inkscape:window-width="1344"
+              inkscape:snap-center="true"
+              inkscape:snap-grids="true"
+              showgrid="false"
+              inkscape:document-rotation="0"
+              inkscape:current-layer="layer2"
+              inkscape:document-units="mm"
+              inkscape:cy="519.1007"
+              inkscape:cx="246.55058"
+              inkscape:zoom="0.58"
+              inkscape:pageshadow="2"
+              inkscape:pageopacity="0.0"
+              borderopacity="1.0"
+              bordercolor="#666666"
+              pagecolor="#ffffff"
+              id="base" />
+            <metadata
+              id="metadata13">
+              <rdf:RDF>
+                <cc:Work
+                  rdf:about="">
+                  <dc:format>image/svg+xml</dc:format>
+                  <dc:type
+                    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                  <dc:title></dc:title>
+                </cc:Work>
+              </rdf:RDF>
+            </metadata>
+            <g
+              inkscape:label="1"
+              id="layer2"
+              inkscape:groupmode="layer">
+              <path
+                inkscape:label="#2"
+                id="2"
+                d="m 3.3546343,49.275857 98.9187257,-0.03073 0.13765,99.087103 z"
+                style="fill:#11144c;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                onclick="selected()"
+                id="1"
+                d="m 3.3699721,49.260497 -0.0307,98.892653 v 0 l 99.0870979,0.16371 z"
+                style="fill:#649d66;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+              <path
+                id="3"
+                d="m 102.27336,49.245127 99.19402,0.03073 -99.05637,99.056373 z"
+                style="fill:#f62a66;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                id="4"
+                d="m 201.39855,49.260493 -0.1069,99.056367 h -98.94946 z"
+                style="fill:#fabc60;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                id="5"
+                d="m 102.34219,148.31686 h 98.94946 l 0.1069,99.05638 z"
+                style="fill:#00a8cc;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                id="6"
+                d="m 102.41101,148.33223 v 98.92338 h 98.94946 z"
+                style="fill:#3a9679;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                id="7"
+                d="m 102.41101,148.33223 v 98.92338 l -99.0563722,0.133 z"
+                style="fill:#ff6600;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <path
+                id="8"
+                d="M 102.41101,148.33223 H 3.461556 l 0.03073,99.22009 z"
+                style="fill:#e16262;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal" />
+              <circle
+                r="22.866013"
+                cy="148.31686"
+                cx="102.34219"
+                id="centro"
+                style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:normal;marker-end:" />
+              <text
+                style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.58333333px;white-space:pre;shape-inside:url(#rect844);"
+                id="text842"
+                xml:space="preserve" />
+              <text
+                id="stage"
+                y="152.16933"
+                x="102.44962"
+                style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;paint-order:normal;"
+                xml:space="preserve"><tspan
+                  style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;paint-order:normal;"
+                  y="152.16933"
+                  x="102.44962"
+                  id="tspan848"
+                  sodipodi:role="line">3</tspan></text>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
