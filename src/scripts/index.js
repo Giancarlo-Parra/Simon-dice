@@ -1,8 +1,12 @@
+
 const btnEmpezar = document.getElementById('btnEmpezar')
+const btnRule = document.getElementById("btnRules")
+const btnCreditos = document.getElementById("btnCreditos")
 const celeste = document.getElementById('celeste')
 const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
+const menu = document.getElementById("menu") 
 const VELOCIDAD = 0.5;
 const ULTIMO_NIVEL = 5
 
@@ -14,9 +18,9 @@ class Juego {
     }
 
     inicializar(){
+        this.toggelBtnEmpezar()
         this.siguienteNivel = this.siguienteNivel.bind(this)
         this.elegirColor = this.elegirColor.bind(this)
-        this.toggelBtnEmpezar()
         this.nivel = 1
         this.colores = {
             celeste,
@@ -26,12 +30,13 @@ class Juego {
         }
     }
     toggelBtnEmpezar(){
-      if (btnEmpezar.classList.contains('hide')){
-        btnEmpezar.classList.remove('hide')
+      console.log("im in")
+      if (menu.classList.contains('hide')){
+        menu.classList.remove('hide')
       }else{
-        btnEmpezar.classList.add('hide')
+        menu.classList.add('hide')
       }
-    }
+   }
 
     crearSecuencia() {
          this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4))
@@ -127,6 +132,17 @@ class Juego {
           }
 }
 
+
 function empezarJuego(){
+  console.log("funciona")
     var juego = new Juego()
+      
+}
+function reglas(){
+  console.log("funciona")
+ //   var juego = new Juego()
+}
+function creditos(){
+  console.log("funciona")
+ //   var juego = new Juego()
 }
