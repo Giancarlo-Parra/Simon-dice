@@ -11,7 +11,7 @@ const b6 = document.getElementById('6')
 const b7 = document.getElementById('7')
 const b8 = document.getElementById('8')
 const VELOCIDAD = 0.5;
-const ULTIMO_NIVEL = 5
+const ULTIMO_NIVEL = 10
 	
 
 class Juego {
