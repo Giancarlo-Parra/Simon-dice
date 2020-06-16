@@ -12,12 +12,12 @@ const b7 = document.getElementById('7')
 const b8 = document.getElementById('8')
 const VELOCIDAD = 0.5;
 const ULTIMO_NIVEL = 5
-
+	
 
 class Juego {
   constructor(){
-      this.inicializar()
       this.crearSecuencia()
+      this.inicializar()
       setTimeout(this.siguienteNivel, 500)
   }
 
@@ -75,7 +75,6 @@ class Juego {
       };
   }
   transformarColorANumero(color) {
-
       switch (color) {
           case 'b1':
               return 0
@@ -110,8 +109,7 @@ class Juego {
    }
 
        apagarColor(color) {
-      this.colores[color].classList.remove('light')
-     
+      this.colores[color].classList.remove('light') 
       }
 
       agregarEventosClick() {
@@ -137,7 +135,6 @@ class Juego {
         }
 
         elegirColor(ev) {
-          console.log("ok")
           const nombreColor = ev.target.dataset.color
           const numeroColor = this.transformarColorANumero(nombreColor)
           this.iluminarColor(nombreColor)
@@ -164,17 +161,14 @@ class Juego {
         }
 }
 
-
 function empezarJuego(){
-  console.log("funciona")
-    var juego = new Juego()
-      
+  
+   var juego = new Juego()
 }
 function reglas(){
-  console.log("funciona")
- //   var juego = new Juego()
+  alert("Comming soon")
+ 
 }
 function creditos(){
-  console.log("funciona")
- //   var juego = new Juego()
+  alert("Comming soon")
 }

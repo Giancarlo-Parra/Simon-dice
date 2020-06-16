@@ -31,8 +31,8 @@ svg{
     display: none;
 }
 .grid-conteiner {
-   padding: 10px 23em;
-    } 
+    padding: 10px 23em;
+} 
 
 .menu {
     background-color: #142850;
@@ -46,7 +46,7 @@ svg{
     border: 0.5px black solid;
     border-radius: 15px;
     box-shadow: 2px 2px 10px #666;
-   
+    
 }
 .board{
     display: flex;
@@ -58,4 +58,55 @@ svg{
     box-shadow: 2px 2px 10px #666;
     background-color: #399645;
     background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23a3c4b3' fill-opacity='0.35' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+/*Selectores de botones*/
+.b1 {
+    fill: #649d66;   
+}
+.b2 {
+    fill: #11144c;   
+}
+.b3 {
+    fill: #f62a66;   
+}
+.b4 {
+    fill: #fabc60;   
+}
+.b5 {
+    fill: #00a8cc;   
+}
+.b6 {
+    fill: #3a9679;   
+}
+.b7 {
+    fill: #ff6600;   
+}
+ .b8 {
+    fill: #e16262;   
+}
+
+
+.b1.light {
+    fill: #b1d1b2;   
+}
+.b2.light {
+    fill: #5d609b;   
+}
+.b3.light {
+    fill: #c08898;   
+}
+.b4.light {
+    fill: #f3debf;   
+}
+.b5.light {
+    fill: #93e4f7;   
+}
+.b6.light {
+    fill: #9bdfc9;   
+}
+.b7.light {
+    fill: #f1b389;   
+}
+ .b8.light {
+    fill: #f0b1b1;   
 }
