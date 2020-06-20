@@ -1,7 +1,8 @@
 const btnEmpezar = document.getElementById('btnEmpezar')
 const btnRule = document.getElementById("btnRules")
 const btnCreditos = document.getElementById("btnCreditos")
-const menu = document.getElementById("menu") 
+const menu = document.getElementById("menu")
+const stop = document.getElementById("stop")
 const b1 = document.getElementById('1')
 const b2 = document.getElementById('2')
 const b3 = document.getElementById('3')
@@ -160,14 +161,14 @@ class Juego {
           }
         }
 }
-
+function pause(){
+  alert("Comming soon")
+}
 function empezarJuego(){
-  
    var juego = new Juego()
 }
 function reglas(){
   alert("Comming soon")
- 
 }
 function creditos(){
   alert("Comming soon")
