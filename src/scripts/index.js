@@ -26,8 +26,6 @@ class Juego {
   inicializar(){
     this.siguienteNivel = this.siguienteNivel.bind(this)
     this.elegirColor = this.elegirColor.bind(this)
-    this.eliminarEventosClick = this.eliminarEventosClick.bind(this)
-    this.toggelBtnEmpezar = this.toggelBtnEmpezar.bind(this)
     this.toggelBtnEmpezar()
     this.nivel = 1
     this.stoped = stop
@@ -43,15 +41,17 @@ class Juego {
     }
   }
   toggelBtnEmpezar(){
-    if (menu.classList.contains('hide')){
-      menu.classList.remove('hide')
+    menu.classList.toggle('hide')
+
+    //if (menu.classList.contains('hide')){
+     // menu.classList.remove('hide')
      
-    }else{
-      menu.classList.add('hide')
+   // }else{
+   //   menu.classList.add('hide')
      
     }
     
- }
+ 
 
   crearSecuencia() {
        this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 8))
@@ -162,13 +162,13 @@ class Juego {
                 this.eliminarEventosClick()
 
               }
+            }
             } else {
             alert("perdio!")
             this.eliminarEventosClick()
             this.toggelBtnEmpezar()
           }
         }
-      }
         
 }
 

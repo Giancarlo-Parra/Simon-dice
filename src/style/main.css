@@ -65,6 +65,7 @@ button:hover{
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 20px;
+    margin-top: 15px;
     width: 80%;
     height: 80%;
     }
@@ -108,7 +109,7 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     width: 757px;
-    height: 600px;
+    height: 85%;
     max-height: 650px;
     border: black 0.5px double;
     border-radius: 4px;
@@ -205,4 +206,15 @@ button:hover{
 }
 .stop:hover {
     cursor: pointer;
+}
+
+/*------------------ media queries ---------------------*/
+
+@media only screen 
+    and (min-device-width: 360px) 
+    and ( orientation: landscape ) {
+    .game {
+        margin: 0;
+        max-height: 100px;
+    }
 }
