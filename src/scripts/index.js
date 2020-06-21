@@ -45,12 +45,12 @@ class Juego {
   toggelBtnEmpezar(){
     if (menu.classList.contains('hide')){
       menu.classList.remove('hide')
-     // this.pause()
+     
     }else{
       menu.classList.add('hide')
-     // this.pause()
+     
     }
-    this.pause()
+    
  }
 
   crearSecuencia() {
@@ -129,7 +129,7 @@ class Juego {
           this.colores.b6.addEventListener('click', this.elegirColor)
           this.colores.b7.addEventListener('click', this.elegirColor)
           this.colores.b8.addEventListener('click', this.elegirColor)
-          this.stoped.addEventListener('click', this.pause)
+         // this.stoped.addEventListener('click', )
         }
 
         eliminarEventosClick() {
@@ -141,7 +141,7 @@ class Juego {
           this.colores.b6.removeEventListener('click', this.elegirColor)
           this.colores.b7.removeEventListener('click', this.elegirColor)
           this.colores.b8.removeEventListener('click', this.elegirColor)
-          this.stoped.removeEventListener('click', this.pause)
+         // this.stoped.removeEventListener('click', this.pause)
         }
 
         elegirColor(ev) {
@@ -169,18 +169,7 @@ class Juego {
           }
         }
       }
-        pause(){
-          const status = cuadrado.target.dataset
-          if(status === "stoped"){
-            cuadrado.classList.add('hide')
-            this.toggelBtnEmpezar()
-            stop.dataset.estado = "run"
-          }else{
-                this.eliminarEventosClick()
-                cuadrado.classList.remove('hide')
-                stop.dataset.estado = "stoped"
-          }
-        }
+        
 }
 
 
