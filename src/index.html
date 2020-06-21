@@ -9,18 +9,18 @@
     
   </head>
   <body>
-    <section id="menu" class="menuFlotante">
-      <div class="contentMenuFlotante">
-          <h1>SIMON DICE</h1>
-          <button id="btnEmpezar" class="btn " onclick="empezarJuego()">Empezar a jugar!</button>
-          <button id="btnRules" class="btn " onclick="reglas()">Rules</button>
-          <button id="btnCreditos" class="btn " onclick="creditos()">Creditos</button>
-      </div>
-    </section>
-
+    
     
     <section class="game">
       <div class="gameBoard">
+        <section id="menu" class="menuFlotante">
+          <div class="contentMenuFlotante">
+              <h1>SIMON DICE</h1>
+              <button id="btnEmpezar" class="btn " onclick="empezarJuego()">Empezar a jugar!</button>
+              <button id="btnRules" class="btn " onclick="reglas()">Rules</button>
+              <button id="btnCreditos" class="btn " onclick="creditos()">Creditos</button>
+          </div>
+        </section>
         <nav>
           <div class="titleConteiner">
             <h1>SIMON DICE</h1> 
@@ -43,7 +43,7 @@
                   viewBox="0 0 254 254"
                   height="10in"
                   width="10in"
-                  onclick= "pause()"
+                  data-estado = "stoped"
                   >
                 <defs
                     id="defs2">

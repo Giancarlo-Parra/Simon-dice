@@ -3,6 +3,7 @@ const btnRule = document.getElementById("btnRules")
 const btnCreditos = document.getElementById("btnCreditos")
 const menu = document.getElementById("menu")
 const stop = document.getElementById("stop")
+const cuadrado = document.getElementById("cuadrado")
 const b1 = document.getElementById('1')
 const b2 = document.getElementById('2')
 const b3 = document.getElementById('3')
@@ -25,8 +26,11 @@ class Juego {
   inicializar(){
     this.siguienteNivel = this.siguienteNivel.bind(this)
     this.elegirColor = this.elegirColor.bind(this)
+    this.eliminarEventosClick = this.eliminarEventosClick.bind(this)
+    this.toggelBtnEmpezar = this.toggelBtnEmpezar.bind(this)
     this.toggelBtnEmpezar()
     this.nivel = 1
+    this.stoped = stop
     this.colores = {
           b1,
           b2,
@@ -41,9 +45,12 @@ class Juego {
   toggelBtnEmpezar(){
     if (menu.classList.contains('hide')){
       menu.classList.remove('hide')
+     // this.pause()
     }else{
       menu.classList.add('hide')
+     // this.pause()
     }
+    this.pause()
  }
 
   crearSecuencia() {
@@ -122,6 +129,7 @@ class Juego {
           this.colores.b6.addEventListener('click', this.elegirColor)
           this.colores.b7.addEventListener('click', this.elegirColor)
           this.colores.b8.addEventListener('click', this.elegirColor)
+          this.stoped.addEventListener('click', this.pause)
         }
 
         eliminarEventosClick() {
@@ -133,6 +141,7 @@ class Juego {
           this.colores.b6.removeEventListener('click', this.elegirColor)
           this.colores.b7.removeEventListener('click', this.elegirColor)
           this.colores.b8.removeEventListener('click', this.elegirColor)
+          this.stoped.removeEventListener('click', this.pause)
         }
 
         elegirColor(ev) {
@@ -153,17 +162,28 @@ class Juego {
                 this.eliminarEventosClick()
 
               }
-            }
-          } else {
+            } else {
             alert("perdio!")
             this.eliminarEventosClick()
             this.toggelBtnEmpezar()
           }
         }
+      }
+        pause(){
+          const status = cuadrado.target.dataset
+          if(status === "stoped"){
+            cuadrado.classList.add('hide')
+            this.toggelBtnEmpezar()
+            stop.dataset.estado = "run"
+          }else{
+                this.eliminarEventosClick()
+                cuadrado.classList.remove('hide')
+                stop.dataset.estado = "stoped"
+          }
+        }
 }
-function pause(){
-  alert("Comming soon")
-}
+
+
 function empezarJuego(){
    var juego = new Juego()
 }
