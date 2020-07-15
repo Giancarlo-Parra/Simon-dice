@@ -1,6 +1,6 @@
 const btnEmpezar = document.getElementById('btnEmpezar')
-const btnRule = document.getElementById("btnRules")
-const btnCreditos = document.getElementById("btnCreditos")
+const AcercaDe = document.getElementById("acercaDe")
+const Creditos = document.getElementById("creditos")
 const menu = document.getElementById("menu")
 const stop = document.getElementById("stop")
 const cuadrado = document.getElementById("cuadrado")
@@ -176,9 +176,11 @@ class Juego {
 function empezarJuego(){
    var juego = new Juego()
 }
-function reglas(){
-  alert("Comming soon")
+function acercaDe(){
+  menu.classList.toggle("hide")
+  AcercaDe.classList.toggle("hide")
 }
 function creditos(){
-  alert("Comming soon")
+  menu.classList.toggle("hide")
+  Creditos.classList.toggle("hide")
 }
